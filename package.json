@@ -4,7 +4,7 @@
   "description": "Creating a template for future web dev projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve",
@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/syafaatsaat/template-web#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.5",
     "css-loader": "^7.1.4",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.6",
+    "jest": "^30.4.2",
     "prettier": "3.8.3",
     "style-loader": "^4.0.0",
     "webpack": "^5.105.4",
