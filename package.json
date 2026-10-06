@@ -1,12 +1,13 @@
 {
   "name": "template-web",
   "version": "1.0.0",
+  "type": "module",
   "description": "Creating a template for future web dev projects",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "node --import tsx ./node_modules/webpack-cli/bin/cli.js serve --open --config webpack.dev.js",
+    "build": "node --import tsx ./node_modules/webpack-cli/bin/cli.js --config webpack.prod.js",
     "dev": "webpack serve",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
@@ -17,7 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/syafaatsaat/template-web/issues"
   },
@@ -30,8 +30,9 @@
     "jest": "^30.4.2",
     "prettier": "3.8.3",
     "style-loader": "^4.0.0",
+    "tsx": "^4.23.15",
     "webpack": "^5.105.4",
-    "webpack-cli": "^7.0.2",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.2.3",
     "webpack-merge": "^6.0.1"
   }
